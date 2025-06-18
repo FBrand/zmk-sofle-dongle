@@ -65,11 +65,11 @@
 
         layer_3 {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans   &trans
-&kp F1   &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &kp BACKSPACE
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+&trans     &trans    &trans    &trans    &trans    &trans        &trans  &trans    &trans    &trans     &trans     &trans   &trans
+&kp F1     &kp F2    &kp F3    &kp F4    &kp F5    &kp F6        &trans  &kp F7    &kp F8    &kp F9     &kp F10    &kp F11  &kp F12
+&kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &trans  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0   &kp EQUAL
+&kp CARET  &kp APOS  &kp BSLH  &kp FSLH  &kp LBKT  &kp DOLLAR    &trans  &kp SEMI  &kp RBKT  &kp MINUS  &kp COMMA  &kp DOT  &kp ENTER
+&trans     &trans    &trans    &trans    &trans    &trans        &trans  &trans    &trans    &trans     &trans     &trans
             >;
         };
 
