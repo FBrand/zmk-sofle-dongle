@@ -38,6 +38,15 @@
     behaviors {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        custom_del {
+            bindings = <&kp RS(DEL)>;
+            key-positions = <25 60>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
