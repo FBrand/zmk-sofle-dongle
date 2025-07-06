@@ -26,12 +26,12 @@
     trigger-period-ms = <16>;
 };
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <175>;
-    tapping-term-ms = <300>;
-    require-prior-idle-ms = <150>;
-};
+//&mt {
+//    flavor = "balanced";
+//    quick-tap-ms = <175>;
+//    tapping-term-ms = <300>;
+//    require-prior-idle-ms = <150>;
+//};
 
 / {
     scroll_encoder: scroll_encoder {
@@ -104,27 +104,27 @@
             label = "MO_RGB2";
         };
 
-        mo_rgb3: mo_rgb3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&tog 3 &rgb_ug RGB_COLOR_HSB(59,100,50)>,
-                <&macro_pause_for_release>,
-                <&rgb_ug RGB_COLOR_HSB(179,100,50) &tog 3>;
-
-            label = "MO_RGB3";
-        };
-
-        mo_rgb4: mo_rgb4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&tog 4 &rgb_ug RGB_COLOR_HSB(360,100,50)>,
-                <&macro_pause_for_release>,
-                <&rgb_ug RGB_COLOR_HSB(179,100,50) &tog 4>;
-
-            label = "MO_RGB4";
-        };
+        //mo_rgb3: mo_rgb3 {
+        //    compatible = "zmk,behavior-macro";
+        //    #binding-cells = <0>;
+        //    bindings =
+        //        <&tog 3 &rgb_ug RGB_COLOR_HSB(59,100,50)>,
+        //        <&macro_pause_for_release>,
+        //        <&rgb_ug RGB_COLOR_HSB(179,100,50) &tog 3>;
+//
+//            label = "MO_RGB3";
+//        };
+//
+//        mo_rgb4: mo_rgb4 {
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings =
+//                <&tog 4 &rgb_ug RGB_COLOR_HSB(360,100,50)>,
+//                <&macro_pause_for_release>,
+//                <&rgb_ug RGB_COLOR_HSB(179,100,50) &tog 4>;
+//
+//            label = "MO_RGB4";
+//        };
     };
 
     keymap {
