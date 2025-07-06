@@ -88,8 +88,7 @@
             bindings =
                 <&rgb_ug RGB_COLOR_HSB(122,100,50) &mo 1>,
                 <&macro_pause_for_release>,
-                <&rgb_ug RGB_COLOR_HSB(179,100,50)>,
-                <&macro_press>;
+                <&rgb_ug RGB_COLOR_HSB(179,100,50)>;
 
             label = "MO_RGB1";
             tap-ms = <20>;
