@@ -63,7 +63,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: layer1}
-  - '&mo_rgb3 3'
+  - '&mo_rgb3'
   - MENU
   '3':
   - OUT BLE
