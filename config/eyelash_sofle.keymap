@@ -147,12 +147,14 @@
 
         layer_3 {
             bindings = <
-&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &bt BT_CLR  &trans    &trans     &trans     &trans   &out OUT_USB
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &trans  &kp F7      &kp F8    &kp F9     &kp F10    &kp F11  &kp F12
-&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &trans  &kp N6      &kp N7    &kp N8     &kp N9     &kp N0   &kp EQUAL
-&kp CARET     &kp APOS      &kp BSLH      &kp FSLH      &kp LBKT      &kp DOLLAR      &trans  &kp SEMI    &kp RBKT  &kp MINUS  &kp COMMA  &kp DOT  &kp ENTER
-&trans        &trans        &trans        &trans        &trans        &trans          &trans  &trans      &trans    &trans     &trans     &trans
+&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &bt BT_CLR  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &out OUT_USB
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &mmv MOVE_DOWN   &kp F7      &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
+&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &mmv MOVE_LEFT   &kp N6      &kp N7           &kp N8           &kp N9           &kp N0           &kp EQUAL
+&kp CARET     &kp APOS      &kp BSLH      &kp FSLH      &kp LBKT      &kp DOLLAR      &mmv MOVE_RIGHT  &kp SEMI    &kp RBKT         &kp MINUS        &kp COMMA        &kp DOT          &kp ENTER
+&mkp RCLK     &trans        &trans        &trans        &trans        &trans          &mkp LCLK        &kp HOME    &kp PAGE_UP      &kp PAGE_DOWN    &kp END          &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_1 {
