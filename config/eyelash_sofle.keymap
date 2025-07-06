@@ -27,13 +27,6 @@
 };
 
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <175>;
-    tapping-term-ms = <300>;
-    require-prior-idle-ms = <150>;
-};
-
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
