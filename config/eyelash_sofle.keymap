@@ -91,7 +91,6 @@
                 <&rgb_ug RGB_COLOR_HSB(179,100,50)>;
 
             label = "MO_RGB1";
-            tap-ms = <20>;
         };
 
         mo_rgb2: mo_rgb2 {
