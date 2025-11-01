@@ -191,6 +191,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            display-name = "NUMBERS";
         };
 
         NAV {
@@ -202,8 +203,8 @@
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "layer1";
             sensor-bindings = <&scroll_encoder>;
+            display-name = "NAV";
         };
 
         NUMBLOCK {
@@ -214,6 +215,7 @@
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp MINUS  &trans
 &trans  &trans  &trans   &trans   &trans   &trans    &trans  &trans        &trans  &trans  &trans  &trans
             >;
+            display-name = "NUMBLOCK";
         };
 
         OEM_ALT {
@@ -226,6 +228,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            display-name = "OEM_ALT";
         };
 
         SPECIAL_CHARS {
@@ -236,6 +239,7 @@
 &trans  &trans       &trans       &trans  &trans  &trans    &trans  &trans  &trans       &trans  &trans       &trans  &trans
 &trans  &trans       &trans       &trans  &trans  &trans    &trans  &trans  &trans       &trans  &trans       &trans
             >;
+            display-name = "SPECIAL_CHARS";
         };
 
         GAMING {
@@ -246,6 +250,7 @@
 &kp LCTRL  &kp Z      &kp X     &kp C     &kp V      &kp B        &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &kp GRAVE  &kp LGUI  &kp LALT  &kp SPACE  &kp ENTER    &trans  &to 0   &trans  &trans  &trans  &trans
             >;
+            display-name = "GAMING";
         };
     };
 
