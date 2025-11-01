@@ -62,7 +62,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: layer1}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: NAV}
   - '&mo_rgb3'
   - CONTEXT MENU
   NUMBERS:
@@ -130,7 +130,7 @@ layers:
   - PgUp
   - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
-  layer1:
+  NAV:
   - {t: '`', s: '~'}
   - F1
   - F2
