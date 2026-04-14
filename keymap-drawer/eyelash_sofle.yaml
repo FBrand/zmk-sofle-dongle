@@ -520,3 +520,68 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [14, 27]
+  k: {t: '1', s: '!'}
+  l: [BASE]
+- p: [15, 28]
+  k: {t: '2', s: '@'}
+  l: [BASE]
+- p: [16, 29]
+  k: {t: '3', s: '#'}
+  l: [BASE]
+- p: [17, 30]
+  k: {t: '4', s: $}
+  l: [BASE]
+- p: [18, 31]
+  k: {t: '5', s: '%'}
+  l: [BASE]
+- p: [20, 33]
+  k: {t: '6', s: ^}
+  l: [BASE]
+- p: [21, 34]
+  k: {t: '7', s: '&'}
+  l: [BASE]
+- p: [22, 35]
+  k: {t: '8', s: '*'}
+  l: [BASE]
+- p: [23, 36]
+  k: {t: '9', s: (}
+  l: [BASE]
+- p: [24, 37]
+  k: {t: '0', s: )}
+  l: [BASE]
+- p: [27, 40]
+  k: $$mdi:keyboard-esc$$
+  l: [BASE]
+- p: [28, 41]
+  k: $$mdi:keyboard-tab$$
+  l: [BASE]
+- p: [29, 42]
+  k: {t: '`', s: '~'}
+  l: [BASE]
+- p: [30, 43]
+  k: {h: '=', s: +}
+  l: [BASE]
+- p: [31, 44]
+  k: {h: '[', s: '{'}
+  l: [BASE]
+- p: [33, 46]
+  k: {h: ']', s: '}'}
+  l: [BASE]
+- p: [34, 47]
+  k: {h: '-', s: _}
+  l: [BASE]
+- p: [35, 48]
+  k: {t: \, s: '|'}
+  l: [BASE]
+- p: [36, 49]
+  k: {t: '''', s: '"'}
+  l: [BASE]
+- p: [37, 50]
+  k: $$mdi:alpha-w-box$$
+  l: [BASE]
+- p: [0, 57]
+  k: {t: BASE, h: toggle}
+- p: [57, 1]
+  k: {t: GAMING, h: toggle}
