@@ -22,7 +22,7 @@
 
 &mmv {
     time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
+    acceleration-exponent = <2>;
     trigger-period-ms = <16>;
 };
 
@@ -263,6 +263,41 @@
             bindings = <&kp HOME &kp LS(END) &kp BSPC>;
             label = "MACRO_DEL_LINE";
         };
+
+        macro_quotes: macro_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            label = "MACRO_QUOTES";
+        };
+
+        macro_parens: macro_parens {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "MACRO_PARENS";
+        };
+
+        macro_brackets: macro_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "MACRO_BRACKETS";
+        };
+
+        macro_braces: macro_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "MACRO_BRACES";
+        };
+
+        macro_git_commit: macro_git_commit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT>;
+            label = "MACRO_GIT_COMMIT";
+        };
     };
 
     keymap {
@@ -360,8 +395,8 @@
             bindings = <
 &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &bt BT_CLR  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &out OUT_USB
 &trans        &trans        &trans        &trans        &trans        &trans          &mmv MOVE_DOWN   &trans      &trans           &trans           &trans           &trans           &trans
-&trans        &trans        &trans        &trans        &trans        &trans          &mmv MOVE_LEFT   &trans      &kp LC(BSPC)     &macro_del_line  &macro_fat_arrow &trans           &trans
-&trans        &trans        &trans        &trans        &trans        &trans          &mmv MOVE_RIGHT  &trans      &trans           &trans           &trans           &trans           &trans
+&trans        &kp F2        &kp F5        &kp F11       &kp F12       &macro_git_commit &mmv MOVE_LEFT   &trans      &kp LC(BSPC)     &macro_del_line  &macro_fat_arrow &trans           &trans
+&trans        &kp F6        &macro_quotes &macro_parens &macro_brackets &macro_braces   &mmv MOVE_RIGHT  &trans      &trans           &trans           &trans           &trans           &trans
 &trans        &mkp RCLK     &trans        &trans        &trans        &trans          &mkp LCLK        &trans      &trans           &trans           &trans           &trans
             >;
 
