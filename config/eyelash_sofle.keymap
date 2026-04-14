@@ -67,24 +67,87 @@
             layers = <0>;
         };
 
-        up {
-            bindings = <&kp UP_ARROW>;
+        combo_n1 {
+            bindings = <&kp N1>;
+            key-positions = <14 27>;
+        };
+        combo_n2 {
+            bindings = <&kp N2>;
+            key-positions = <15 28>;
+        };
+        combo_n3 {
+            bindings = <&kp N3>;
+            key-positions = <16 29>;
+        };
+        combo_n4 {
+            bindings = <&kp N4>;
+            key-positions = <17 30>;
+        };
+        combo_n5 {
+            bindings = <&kp N5>;
+            key-positions = <18 31>;
+        };
+        combo_n6 {
+            bindings = <&kp N6>;
+            key-positions = <20 33>;
+        };
+        combo_n7 {
+            bindings = <&kp N7>;
+            key-positions = <21 34>;
+        };
+        combo_n8 {
+            bindings = <&kp N8>;
             key-positions = <22 35>;
         };
+        combo_n9 {
+            bindings = <&kp N9>;
+            key-positions = <23 36>;
+        };
+        combo_n0 {
+            bindings = <&kp N0>;
+            key-positions = <24 37>;
+        };
 
-        down {
-            bindings = <&kp DOWN_ARROW>;
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <27 40>;
+        };
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <28 41>;
+        };
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <29 42>;
+        };
+        combo_equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <30 43>;
+        };
+        combo_lbkt {
+            bindings = <&kp LBKT>;
+            key-positions = <31 44>;
+        };
+
+        combo_rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <33 46>;
+        };
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <34 47>;
+        };
+        combo_bslh {
+            bindings = <&kp BSLH>;
             key-positions = <35 48>;
         };
-
-        right {
-            bindings = <&kp RIGHT_ARROW>;
-            key-positions = <35 36>;
+        combo_sqt {
+            bindings = <&kp SQT>;
+            key-positions = <36 49>;
         };
-
-        left {
-            bindings = <&kp LEFT_ARROW>;
-            key-positions = <35 34>;
+        combo_capsword {
+            bindings = <&caps_word>;
+            key-positions = <37 50>;
         };
 
         Escape_0 {
