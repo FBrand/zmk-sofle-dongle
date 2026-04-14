@@ -53,7 +53,7 @@
     };
 
     combos {
-        compatible = "zmk,combos"
+        compatible = "zmk,combos";
 
         combo_n1 {
             bindings = <&kp N1>;
