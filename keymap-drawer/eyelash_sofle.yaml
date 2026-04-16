@@ -171,10 +171,10 @@ layers:
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB5'
   - $$mdi:pan-left$$
   - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:pan-right$$
+  - '&mkp MB4'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:printer-outline$$
@@ -342,18 +342,18 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - '&altcode_EURO'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '&altcode_ue', s: '&altcode_UE'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&altcode_ue'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&altcode_oe'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '&altcode_oe', s: '&altcode_OE'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&altcode_ae'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '&altcode_ae', s: '&altcode_AE'}
   - '&altcode_ss'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -487,7 +487,7 @@ layers:
   - F5
   - F11
   - F12
-  - '&macro_git_commit'
+  - '&macro_brackets'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Ctl+$$mdi:backspace$$', type: backspace}
@@ -497,9 +497,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - F6
+  - '&macro_git_commit'
   - '&macro_quotes'
   - '&macro_parens'
-  - '&macro_brackets'
   - '&macro_braces'
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -551,25 +551,25 @@ combos:
 - p: [24, 37]
   k: {t: '0', s: )}
   l: [BASE]
-- p: [27, 40]
+- p: [17, 18]
   k: $$mdi:keyboard-esc$$
   l: [BASE]
-- p: [28, 41]
+- p: [30, 31]
   k: $$mdi:keyboard-tab$$
   l: [BASE]
-- p: [29, 42]
+- p: [28, 41]
   k: {t: '`', s: '~'}
   l: [BASE]
-- p: [30, 43]
+- p: [29, 42]
   k: {h: '=', s: +}
   l: [BASE]
-- p: [31, 44]
+- p: [30, 43]
   k: {h: '[', s: '{'}
   l: [BASE]
-- p: [33, 46]
+- p: [34, 47]
   k: {h: ']', s: '}'}
   l: [BASE]
-- p: [34, 47]
+- p: [33, 34]
   k: {h: '-', s: _}
   l: [BASE]
 - p: [35, 48]
@@ -578,8 +578,14 @@ combos:
 - p: [36, 49]
   k: {t: '''', s: '"'}
   l: [BASE]
-- p: [37, 50]
+- p: [46, 47]
   k: $$mdi:alpha-w-box$$
+  l: [BASE]
+- p: [20, 21]
+  k: {t: 'Ctl+$$mdi:backspace$$', type: backspace}
+  l: [BASE]
+- p: [43, 44]
+  k: Ctl+Sft+R
   l: [BASE]
 - p: [0, 57]
   k: {t: BASE, h: toggle}
