@@ -53,22 +53,22 @@
         mm_ae: mm_ae {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&altcode_ae>, <&altcode_AE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&altcode_ae>, <&altcode_ae_upper>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
         mm_oe: mm_oe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&altcode_oe>, <&altcode_OE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&altcode_oe>, <&altcode_oe_upper>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
         mm_ue: mm_ue {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&altcode_ue>, <&altcode_UE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&altcode_ue>, <&altcode_ue_upper>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
         };
     };
 
@@ -331,25 +331,25 @@
             label = "MACRO_GIT_COMMIT";
         };
 
-        altcode_AE: altcode_AE {
+        altcode_ae_upper: altcode_ae_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt RIGHT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_6 &kt RIGHT_ALT>;
-            label = "ALTCODE_AE";
+            label = "ALTCODE_AE_UPPER";
         };
 
-        altcode_OE: altcode_OE {
+        altcode_oe_upper: altcode_oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt RIGHT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kt RIGHT_ALT>;
-            label = "ALTCODE_OE";
+            label = "ALTCODE_OE_UPPER";
         };
 
-        altcode_UE: altcode_UE {
+        altcode_ue_upper: altcode_ue_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt RIGHT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp KP_NUMBER_0 &kt RIGHT_ALT>;
-            label = "ALTCODE_UE";
+            label = "ALTCODE_UE_UPPER";
         };
 
         altcode_EURO: altcode_EURO {
