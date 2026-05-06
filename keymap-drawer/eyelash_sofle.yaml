@@ -352,9 +352,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   SPECIAL_CHARS:
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&PWA_Base'
-  - '&PWA_G'
-  - '&PWA_K'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
