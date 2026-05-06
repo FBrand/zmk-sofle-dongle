@@ -2,30 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: gpeye
-      url-base: https://github.com/GPeye
-    - name: tokyo2006
-      url-base: https://github.com/tokyo2006
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
     - name: ggrocer
       url-base: https://github.com/greengrocer98
     - name: badjeff
       url-base: https://github.com/badjeff
   projects:
-    - name: mario-peripheral-animation
-      remote: gpeye
-      revision: main 
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0 # main
+      revision: v0.3.0
       import: app/west.yml
-    - name: prospector-zmk-module                 # <--- and these
-      remote: tokyo2006                          # <---
-      revision: micro_spi2  
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: v0.3
     - name: zmk-paw3395-driver
       remote: ggrocer
       revision: 79b4dfc7bee857dff320a381fe8b193c9307680f

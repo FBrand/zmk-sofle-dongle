@@ -10,6 +10,27 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define BASE 0
+#define LOWER 1
+#define RAISE 2
+#define ADJUST 3
+
+/ {
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <14>;
+        rows = <6>;
+        map = <
+            RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)  RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11) RC(0,12) RC(0,13)
+            RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)  RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11) RC(1,12) RC(1,13)
+            RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11) RC(2,12) RC(2,13)
+            RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)  RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11) RC(3,12) RC(3,13)
+            RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)  RC(4,7) RC(4,8) RC(4,9) RC(4,10) RC(4,11) RC(4,12)
+            RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4)
+        >;
+    };
+};
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -49,7 +70,32 @@
         tap-ms = <100>;
     };
 
+    rot_enc: sensor_rotate_ufa {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&ec_s MOVE_Y(-37)>, <&ec_s MOVE_Y(37)>;
+        tap-ms = <65>;
+    };
+
     behaviors {
+        u_lt_mouse: u_lt_mouse {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&mkp>;
+        };
+
+        ec_s: mouse_scroll {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <3>;
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+            time-to-max-speed-ms = <100>;
+            acceleration-exponent = <0>;
+        };
         mm_ae: mm_ae {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -370,9 +416,10 @@
 &kp TAB     &kp A   &mt LCTRL S  &mt LGUI D       &mt LALT F            &kp G                   &kp LEFT_ARROW   &kp H                  &mt RIGHT_ALT J        &mt RGUI K    &mt RIGHT_CONTROL L  &lt 5 SEMICOLON     &kp SQT
 &kp MINUS   &kp Z   &kp X        &kp C            &kp V                 &kp B                   &kp RIGHT_ARROW  &kp N                  &kp M                  &kp COMMA     &kp DOT              &kp FSLH            &kp BACKSLASH
 &kp K_MUTE  &to 0   &mo_rgb4     &lt 1 BACKSPACE  &mt LEFT_SHIFT SPACE  &lt 7 ENTER             &kp ENTER        &lt 3 ENTER            &mt RIGHT_SHIFT SPACE  &lt 2 DELETE  &mo_rgb3             &kp K_CONTEXT_MENU
+&mkp LCLK  &mkp RCLK  &mkp MCLK  &u_lt_mouse LOWER MB4  &u_lt_mouse RAISE MB5
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN &rot_enc>;
             display-name = "BASE";
         };
 
@@ -383,9 +430,10 @@
 &kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &mmv MOVE_LEFT   &kp N6      &kp N7           &kp N8           &kp N9           &kp N0           &kp EQUAL
 &kp CARET     &kp APOS      &kp BSLH      &kp FSLH      &kp LBKT      &kp DOLLAR      &mmv MOVE_RIGHT  &kp SEMI    &kp RBKT         &kp MINUS        &kp COMMA        &kp DOT          &kp ENTER
 &mkp RCLK     &trans        &trans        &trans        &trans        &trans          &mkp LCLK        &trans      &trans           &kp PAGE_UP      &kp PAGE_DOWN    &trans
+&trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder &rot_enc>;
             display-name = "NUMBERS";
         };
 
@@ -396,9 +444,10 @@
 &trans      &trans           &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN     &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN         &kp RIGHT    &kp C_VOL_UP      &trans
 &trans      &mkp MB5         &msc SCRL_LEFT  &mkp MCLK        &mkp MB4         &trans             &mmv MOVE_RIGHT  &kp PSCRN        &kp C_PREV       &kp C_PLAY_PAUSE &kp C_NEXT   &kp C_VOL_DN      &trans
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans           &trans       &trans
+&trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder &rot_enc>;
             display-name = "NAV";
         };
 
@@ -409,6 +458,7 @@
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp COMMA &trans  &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS   &trans
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp SEMICOLON    &trans  &kp TAB       &kp N1  &kp N2  &kp N3  &kp ENTER  &trans
 &trans  &trans  &trans   &trans   &trans   &trans    &trans  &trans        &trans  &kp N0  &kp DOT &kp EQUAL
+&trans &trans &trans &trans &trans
             >;
 
             display-name = "NUMBLOCK";
@@ -421,19 +471,21 @@
 &trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
 &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder &rot_enc>;
             display-name = "OEM_ALT";
         };
 
         SPECIAL_CHARS {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &PWA_Base  &PWA_G  &PWA_K  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &altcode_EURO  &trans  &trans    &trans  &trans  &mm_ue  &trans  &mm_oe  &trans  &trans
 &trans  &mm_ae  &altcode_ss  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans &trans &trans &trans &trans
             >;
 
             display-name = "SPECIAL_CHARS";
@@ -446,6 +498,7 @@
 &kp N7   &kp LSHFT  &kp A     &kp S     &kp D      &kp F        &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
 &kp N8   &kp LCTRL  &kp Z     &kp X     &kp C      &kp V        &trans  &trans  &trans    &trans    &trans     &trans  &trans
 &kp F1   &kp GRAVE  &kp LGUI  &kp LALT  &kp SPACE  &kp ENTER    &trans  &to 0   &MO_6to0  &trans    &trans     &trans
+&trans &trans &trans &trans &trans
             >;
 
             display-name = "GAMING";
@@ -458,9 +511,10 @@
 &trans        &kp F2        &kp F5        &kp F11       &kp F12       &macro_brackets &mmv MOVE_LEFT   &trans      &kp LC(BSPC)     &macro_del_line  &macro_fat_arrow &trans           &trans
 &trans        &kp F6        &macro_git_commit &macro_quotes &macro_parens &macro_braces   &mmv MOVE_RIGHT  &trans      &trans           &trans           &trans           &trans           &trans
 &trans        &mkp RCLK     &trans        &trans        &trans        &trans          &mkp LCLK        &trans      &trans           &trans           &trans           &trans
+&trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder &rot_enc>;
             display-name = "UTILITY";
         };
     };
