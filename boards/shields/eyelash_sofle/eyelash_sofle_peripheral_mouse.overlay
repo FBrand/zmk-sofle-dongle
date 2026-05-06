@@ -7,6 +7,8 @@
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &mouse_transform;
 		zmk,backlight = &backlight;
+        zephyr,console = &cdc_acm_uart0;
+        zephyr,shell-uart = &cdc_acm_uart0;
     }; 
 
     vbatt: vbatt {
@@ -135,6 +137,13 @@ encoder: &qdec0 {
 		x-input-code = <INPUT_REL_X>;
 		y-input-code = <INPUT_REL_Y>;
 	};
+};
+
+&zephyr_udc0 {
+    status = "okay";
+    cdc_acm_uart0: cdc_acm_uart0 {
+        compatible = "zephyr,cdc-acm-uart";
+    };
 };
 
 // / {
