@@ -15,17 +15,18 @@
         zephyr,shell-uart = &cdc_acm_uart0;
     };
 
-    zephyr_udc0: &usbd {
-        status = "okay";
-        cdc_acm_uart0: cdc_acm_uart0 {
-            compatible = "zephyr,cdc-acm-uart";
-        };
-    };
     mock_kscan: kscan_1 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+};
+
+&usbd {
+    status = "okay";
+    cdc_acm_uart0: cdc_acm_uart0 {
+        compatible = "zephyr,cdc-acm-uart";
     };
 };
 
