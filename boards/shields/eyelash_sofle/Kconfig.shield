@@ -9,3 +9,7 @@ config SHIELD_EYELASH_SOFLE_PERIPHERAL_LEFT
 
 config SHIELD_EYELASH_SOFLE_PERIPHERAL_RIGHT
     def_bool $(shields_list_contains,eyelash_sofle_peripheral_right)
+
+config SHIELD_EYELASH_SOFLE_PERIPHERAL_MOUSE
+    def_bool $(shields_list_contains,eyelash_sofle_peripheral_mouse)
+    select ZMK_SPLIT
