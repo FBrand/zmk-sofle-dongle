@@ -1,7 +1,7 @@
 if SHIELD_UFA
 
 config ZMK_KEYBOARD_NAME
-    default "Ufa"
+    default "Elite Keyboard"
 
 config ZMK_SPLIT
     default y
