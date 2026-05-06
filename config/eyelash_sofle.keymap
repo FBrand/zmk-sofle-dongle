@@ -480,7 +480,7 @@
 
         SPECIAL_CHARS {
             bindings = <
-&trans  &PWA_Base  &PWA_G  &PWA_K  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &altcode_EURO  &trans  &trans    &trans  &trans  &mm_ue  &trans  &mm_oe  &trans  &trans
 &trans  &mm_ae  &altcode_ss  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
